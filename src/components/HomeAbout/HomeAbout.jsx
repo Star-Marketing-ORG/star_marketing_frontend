@@ -1,4 +1,3 @@
-import { aboutCards, reviewCards } from "../../assets/data";
 import "./HomeAbout.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,56 +5,18 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-import { useRef, useState, useEffect } from "react";
-import { reviewData } from "../../assets/reviewData";
+import { useRef, useState } from "react";
 import BrandCards from "../BrandCards/BrandCards";
-
-import collage_img from "../../assets/images/collage.jpeg";
 import { Link } from "react-router-dom";
-
-import { baseUrl } from "../../main";
-import toast from "react-hot-toast";
-import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
 import Loader from "../../components/Loader/Loader";
-
-const fetchReview = async () => {
-  if (!navigator.onLine) {
-    throw new Error("NETWORK_ERROR");
-  }
-  const { data } = await axios.get(`${baseUrl}/review/all-reviews`);
-  return data?.reviews;
-};
+import { useReviews } from "../../services/hooks/useHooks";
 
 const HomeAbout = () => {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
   const swiperRef = useRef(null);
 
-  const { data, isLoading, isError, error, refetch } = useQuery({
-    queryKey: ["review"],
-    queryFn: fetchReview,
-    staleTime: 1000 * 60 * 5,
-    retry: 2,
-  });
-
-  if (isError) {
-    console.log("🔴 Error Object:", error);
-    if (error.name === "AxiosError") {
-      const isNetworkError =
-        !error.response ||
-        error.message.includes("ECONNRESET") ||
-        error.response?.data?.message === "read ECONNRESET";
-
-      if (isNetworkError) {
-        setTimeout(() => {
-          toast.error("🚫 Network error. Please check your connection.");
-        }, 100);
-      } else {
-        console.error("❗ Server Error:", error.response?.status);
-      }
-    }
-  }
+  const { data, isLoading, isError, error, refetch } = useReviews();
 
   return (
     <div className="homeAbout">
@@ -80,9 +41,6 @@ const HomeAbout = () => {
               </Link>
             </div>
           </div>
-          {/* <div className="homeAbout-top-right">
-            <img src={collage_img} alt="partner-image" loading="lazy" />
-          </div> */}
         </div>
         <div className="homeAbout-center">
           <BrandCards />

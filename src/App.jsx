@@ -56,7 +56,7 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <CurtainLoader />
         <ContactButtons />
-        <OfferComp />
+        {/* <OfferComp /> */}
         <BrowserRouter>
           <ScrollToTopAndTrack />
 

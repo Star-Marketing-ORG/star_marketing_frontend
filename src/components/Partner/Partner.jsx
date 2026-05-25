@@ -4,47 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { partnerCards } from "../../assets/data";
-
-import { baseUrl } from "../../main";
-import toast from "react-hot-toast";
-import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
 import Loader from "../../components/Loader/Loader";
-
-const fetchCards = async () => {
-  if (!navigator.onLine) {
-    throw new Error("NETWORK_ERROR");
-  }
-  const { data } = await axios.get(`${baseUrl}/partner-card/all-partner-cards`);
-  return data?.partnerCards;
-};
+import { usePartnerCards } from "../../services/hooks/useHooks";
 
 const Partner = () => {
-  const { data, isLoading, isError, error, refetch } = useQuery({
-    queryKey: ["parnter-cards"],
-    queryFn: fetchCards,
-    staleTime: 1000 * 60 * 5,
-    retry: 2,
-  });
-
-  if (isError) {
-    console.log("🔴 Error Object:", error);
-    if (error.name === "AxiosError") {
-      const isNetworkError =
-        !error.response ||
-        error.message.includes("ECONNRESET") ||
-        error.response?.data?.message === "read ECONNRESET";
-
-      if (isNetworkError) {
-        setTimeout(() => {
-          toast.error("🚫 Network error. Please check your connection.");
-        }, 100);
-      } else {
-        console.error("❗ Server Error:", error.response?.status);
-      }
-    }
-  }
+  const { data, isLoading, isError, error, refetch } = usePartnerCards();
 
   return (
     <div className="partner">

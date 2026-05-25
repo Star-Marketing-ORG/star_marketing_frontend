@@ -1,11 +1,5 @@
 import "./Projects.scss";
 
-import { projectData } from "../../assets/data";
-
-import { baseUrl } from "../../main";
-import toast from "react-hot-toast";
-import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
 import Loader from "../../components/Loader/Loader";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,42 +7,11 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-import { useRef, useState, useEffect } from "react";
-
-const fetchProjects = async () => {
-  if (!navigator.onLine) {
-    throw new Error("NETWORK_ERROR");
-  }
-  const { data } = await axios.get(`${baseUrl}/project/all-projects`);
-
-  return data?.projects;
-};
+import { useRef, useState } from "react";
+import { useProjects } from "../../services/hooks/useHooks";
 
 const Projects = () => {
-  const { data, isLoading, isError, error, refetch } = useQuery({
-    queryKey: ["projects"],
-    queryFn: fetchProjects,
-    staleTime: 1000 * 60 * 5,
-    retry: 2,
-  });
-
-  if (isError) {
-    console.log("🔴 Error Object:", error);
-    if (error.name === "AxiosError") {
-      const isNetworkError =
-        !error.response ||
-        error.message.includes("ECONNRESET") ||
-        error.response?.data?.message === "read ECONNRESET";
-
-      if (isNetworkError) {
-        setTimeout(() => {
-          toast.error("🚫 Network error. Please check your connection.");
-        }, 100);
-      } else {
-        console.error("❗ Server Error:", error.response?.status);
-      }
-    }
-  }
+  const { data, isLoading, isError, error, refetch } = useProjects();
 
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
