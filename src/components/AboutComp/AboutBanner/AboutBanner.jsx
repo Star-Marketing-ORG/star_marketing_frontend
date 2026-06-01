@@ -1,9 +1,8 @@
 import "./AboutBanner.scss";
 
-import about_banner from "../../../assets/images/about-banner.jpg"
+import about_banner from "../../../assets/images/about-banner.jpg";
 
 const AboutBanner = () => {
-
   return (
     <div className="about-banner">
       <div className="about-top">

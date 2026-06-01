@@ -7,8 +7,6 @@ import work_img3 from "../../../assets/images/workImgs/work_img3.jpg";
 import { useLocation } from "react-router-dom";
 import SEO from "../../../components/SEO/SEO";
 
-
-
 const WorksPage1 = () => {
   const title =
     "How a Website Can Empower Your Business, Education, and Travel Goals";
@@ -18,9 +16,9 @@ const WorksPage1 = () => {
   const smdesc = "How it works?";
 
   const location = useLocation();
-const baseUrl =
-  import.meta.env.VITE_BASE_URL || "https://www.wingstarnarketing.com";
-const fullUrl = `${baseUrl}${location.pathname}`;
+  const baseUrl =
+    import.meta.env.VITE_BASE_URL || "https://www.wingstarnarketing.com";
+  const fullUrl = `${baseUrl}${location.pathname}`;
 
   return (
     <div className="workspage1">

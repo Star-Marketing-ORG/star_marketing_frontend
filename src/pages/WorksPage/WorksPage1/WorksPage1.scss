@@ -41,7 +41,7 @@
       flex-direction: row-reverse;
       padding: 0px;
 
-      @include lg{
+      @include lg {
         flex-direction: column;
         max-width: 750px;
         gap: 40px;

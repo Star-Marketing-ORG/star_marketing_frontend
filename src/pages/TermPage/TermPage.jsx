@@ -19,13 +19,16 @@ const TermPage = () => {
             </h2>
             <div className="article">
               <p>
-                <strong>A 50% advance payment</strong> is required to initiate the project.
+                <strong>A 50% advance payment</strong> is required to initiate
+                the project.
               </p>
               <p>
-                <strong>The remaining 50%</strong> is due upon 50% completion of the website or service agreed upon.
+                <strong>The remaining 50%</strong> is due upon 50% completion of
+                the website or service agreed upon.
               </p>
               <p>
-                Work will <strong>resume/continue only after</strong> the balance payment is cleared.
+                Work will <strong>resume/continue only after</strong> the
+                balance payment is cleared.
               </p>
             </div>
           </div>
@@ -33,11 +36,14 @@ const TermPage = () => {
           {/* Section 2 */}
           <div className="section">
             <h2>
-              <span className="section-number">2</span> Post-Completion Modifications
+              <span className="section-number">2</span> Post-Completion
+              Modifications
             </h2>
             <div className="article">
               <p>
-                Once the project is completed, clients have <strong>7 calendar days</strong> to request modifications related to:
+                Once the project is completed, clients have{" "}
+                <strong>7 calendar days</strong> to request modifications
+                related to:
               </p>
               <ul>
                 <li>Corrections</li>
@@ -48,7 +54,8 @@ const TermPage = () => {
                 <li>Any additional services provided</li>
               </ul>
               <p>
-                Modification requests beyond this period may be subject to <strong>additional charges</strong>.
+                Modification requests beyond this period may be subject to{" "}
+                <strong>additional charges</strong>.
               </p>
             </div>
           </div>
@@ -56,14 +63,19 @@ const TermPage = () => {
           {/* Section 3 */}
           <div className="section">
             <h2>
-              <span className="section-number">3</span> Purchase Order Confirmation
+              <span className="section-number">3</span> Purchase Order
+              Confirmation
             </h2>
             <div className="article">
               <p>
-                A <strong>written purchase order (PO) or formal approval</strong> is mandatory from the client before starting any project.
+                A{" "}
+                <strong>written purchase order (PO) or formal approval</strong>{" "}
+                is mandatory from the client before starting any project.
               </p>
               <p>
-                The confirmation must be provided via <strong>email and/or WhatsApp</strong> as an official acknowledgment of the service agreement.
+                The confirmation must be provided via{" "}
+                <strong>email and/or WhatsApp</strong> as an official
+                acknowledgment of the service agreement.
               </p>
             </div>
           </div>
@@ -71,7 +83,8 @@ const TermPage = () => {
           {/* Section 4 */}
           <div className="section">
             <h2>
-              <span className="section-number">4</span> Purchases, Payments, and Refunds
+              <span className="section-number">4</span> Purchases, Payments, and
+              Refunds
             </h2>
             <div className="article">
               <h3>Payment Obligations:</h3>

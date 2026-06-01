@@ -61,11 +61,11 @@ Star Marketing is a performance-driven digital agency platform that enables busi
 
 ## 📁 Repositories
 
-| Repo        | Description                              |
-|-------------|------------------------------------------|
-| [Frontend](https://github.com/riteshgharti333/star_marketing_frontend)     | Client-facing marketing site (React + Tailwind) |
-| [Backend](https://github.com/riteshgharti333/star_marketing_backend)       | Secure API + logic (Express + MongoDB)         |
-| [Admin Panel](https://github.com/riteshgharti333/star_marketing_admin)     | Admin dashboard (React + JWT + Cloudinary)     |
+| Repo                                                                   | Description                                     |
+| ---------------------------------------------------------------------- | ----------------------------------------------- |
+| [Frontend](https://github.com/riteshgharti333/star_marketing_frontend) | Client-facing marketing site (React + Tailwind) |
+| [Backend](https://github.com/riteshgharti333/star_marketing_backend)   | Secure API + logic (Express + MongoDB)          |
+| [Admin Panel](https://github.com/riteshgharti333/star_marketing_admin) | Admin dashboard (React + JWT + Cloudinary)      |
 
 ---
 

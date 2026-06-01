@@ -1,15 +1,17 @@
 import "./ServiceBanner.scss";
 import serviceBanner from "../../assets/images/service-banner.jpg";
 
-
-const ServiceBanner = ({ smdesc, title, desc, dot,newServiceBanner }) => {
- console.log(newServiceBanner)
+const ServiceBanner = ({ smdesc, title, desc, dot, newServiceBanner }) => {
+  console.log(newServiceBanner);
 
   return (
     <div className="service-banner">
       <div className="service-top">
-        <img src={newServiceBanner || serviceBanner} alt="service-banner" loading="lazy" />
-
+        <img
+          src={newServiceBanner || serviceBanner}
+          alt="service-banner"
+          loading="lazy"
+        />
 
         <div className="service-banner-desc">
           <span>

@@ -66,4 +66,3 @@ export const navCards = [
     desc: "Get a comprehensive overview of our services, values, achievements, and vision. Discover how we can help your business grow with innovative digital solutions.",
   },
 ];
-

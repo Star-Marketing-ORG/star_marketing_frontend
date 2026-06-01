@@ -144,7 +144,7 @@ const Navbar = () => {
                       ))}
                       {designNewData?.map((item, index) => (
                         <Link
-                            to={`/service/${item.selectedService}/${item.bannerSection.serviceName}/${item._id}`}
+                          to={`/service/${item.selectedService}/${item.bannerSection.serviceName}/${item._id}`}
                           className="nav-card-link"
                           key={index}
                         >

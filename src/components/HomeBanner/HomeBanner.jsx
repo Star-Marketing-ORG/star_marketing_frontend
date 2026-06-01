@@ -10,7 +10,6 @@ import { useCompanyCards } from "../../services/hooks/useHooks";
 function HomeBanner() {
   const { data, isLoading, isError, error, refetch } = useCompanyCards();
 
-
   return (
     <div className="homeBanner">
       <div className="banner-video">

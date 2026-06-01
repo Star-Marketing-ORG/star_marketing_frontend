@@ -1,6 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import { getAllCompanyCardsApi, getAllPartnerCardsApi, getAllProjectsApi, getAllReviewsApi } from "../api/api";
-
+import {
+  getAllCompanyCardsApi,
+  getAllPartnerCardsApi,
+  getAllProjectsApi,
+  getAllReviewsApi,
+} from "../api/api";
 
 export const usePartnerCards = () => {
   return useQuery({
@@ -24,7 +28,6 @@ export const useCompanyCards = () => {
     },
   });
 };
-
 
 export const useProjects = () => {
   return useQuery({

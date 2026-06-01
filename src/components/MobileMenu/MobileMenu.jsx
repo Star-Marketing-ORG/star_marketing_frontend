@@ -60,7 +60,6 @@ const menuItems = [
   { title: "Founder", link: "/founder" },
 
   { title: "Contact", link: "/contact-us" },
-
 ];
 
 const MobileMenu = () => {
@@ -203,55 +202,54 @@ const MobileMenu = () => {
       </div>
 
       {/* Animate Presence for Menu */}
-     <AnimatePresence>
-  {isOpen && (
-    <motion.ul
-      className="menuList"
-      initial={{ y: -300, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ y: -300, opacity: 0 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-    >
-      {mergedMenuItems.map((item, i) => (
-        <li key={i} className="mobile-link">
-          {item.submenu ? (
-            <>
-              <div
-                className="submenu-title"
-                onClick={() => toggleSubmenu(i)}
-              >
-                {item.title}
-                <span
-                  className={`plus ${activeSubmenu === i ? "open" : ""}`}
-                ></span>
-              </div>
-              <AnimatePresence>
-                {activeSubmenu === i && (
-                  <motion.ul
-                    className="submenu"
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {item.submenu.map((sub, j) => (
-                      <li key={j} className="submenu-item">
-                        <Link to={sub.link}>{sub.title}</Link>
-                      </li>
-                    ))}
-                  </motion.ul>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.ul
+            className="menuList"
+            initial={{ y: -300, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -300, opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            {mergedMenuItems.map((item, i) => (
+              <li key={i} className="mobile-link">
+                {item.submenu ? (
+                  <>
+                    <div
+                      className="submenu-title"
+                      onClick={() => toggleSubmenu(i)}
+                    >
+                      {item.title}
+                      <span
+                        className={`plus ${activeSubmenu === i ? "open" : ""}`}
+                      ></span>
+                    </div>
+                    <AnimatePresence>
+                      {activeSubmenu === i && (
+                        <motion.ul
+                          className="submenu"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          {item.submenu.map((sub, j) => (
+                            <li key={j} className="submenu-item">
+                              <Link to={sub.link}>{sub.title}</Link>
+                            </li>
+                          ))}
+                        </motion.ul>
+                      )}
+                    </AnimatePresence>
+                  </>
+                ) : (
+                  <Link to={item.link}>{item.title}</Link> // ✅ else fallback correctly wrapped
                 )}
-              </AnimatePresence>
-            </>
-          ) : (
-            <Link to={item.link}>{item.title}</Link>  // ✅ else fallback correctly wrapped
-          )}
-        </li>
-      ))}
-    </motion.ul>
-  )}
-</AnimatePresence>
-
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

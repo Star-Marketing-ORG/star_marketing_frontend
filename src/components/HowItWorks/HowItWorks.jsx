@@ -17,9 +17,13 @@ const HowItWorks = () => {
         </div>
 
         <div className="howitworks-left-items">
-          <Link to={"/how-website-works?"} className="how-link">How Website works?</Link>
+          <Link to={"/how-website-works?"} className="how-link">
+            How Website works?
+          </Link>
 
-          <Link to={"/how-social-media-works?"} className="how-link">How Social Media works?</Link>
+          <Link to={"/how-social-media-works?"} className="how-link">
+            How Social Media works?
+          </Link>
         </div>
       </div>
       <div className="howitworks-right">

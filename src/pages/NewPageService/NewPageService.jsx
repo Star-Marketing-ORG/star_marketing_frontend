@@ -114,8 +114,8 @@ const NewPageService = () => {
           data?.selectedService === "marketing"
             ? "mark"
             : data?.selectedService === "development"
-            ? "development"
-            : ""
+              ? "development"
+              : ""
         }
         newServiceBanner={data?.bannerSection?.bannerImage}
       />
@@ -127,8 +127,8 @@ const NewPageService = () => {
             data?.selectedService === "marketing"
               ? "mark"
               : data?.selectedService === "development"
-              ? "development"
-              : ""
+                ? "development"
+                : ""
           }
           diff="newService"
         />

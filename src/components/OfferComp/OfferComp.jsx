@@ -57,7 +57,7 @@ const OfferComp = () => {
         toast.error("Failed to send message. Please try again.");
       }
     } catch (error) {
-        toast.error("Network error occurred! Please try again later.");
+      toast.error("Network error occurred! Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -73,7 +73,8 @@ const OfferComp = () => {
         </button>
         <h2>🎉 Get an Exclusive Offer!</h2>
         <p>
-          Unlock up to <strong>30% OFF</strong> on our Design, Development & Marketing services!
+          Unlock up to <strong>30% OFF</strong> on our Design, Development &
+          Marketing services!
         </p>
         <form onSubmit={handleSubmit}>
           <input
