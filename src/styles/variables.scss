@@ -1,0 +1,183 @@
+// ---------- COLOR SYSTEM ----------
+// Primary Brand Colors
+$primary-blue: #2671fe;
+$primary-blue-dark: #1a5ad9;
+$primary-blue-light: #4d8fff;
+$primary-purple: #6c5ce7;
+
+// Background Colors
+$bg-primary: #0a0a0a;
+$bg-secondary: #121212;
+$bg-tertiary: #1a1a1a;
+$bg-card: #1e1e1e;
+$bg-card-hover: #242424;
+$bg-overlay: rgba(10, 10, 10, 0.8);
+
+// Text Colors
+$text-primary: #e0e0e0;
+$text-secondary: #888888;
+$text-tertiary: #666666;
+$text-muted: #4a4a4a;
+
+// Accent & Status Colors
+$accent-green: #00c853;
+$accent-red: #ff4444;
+$accent-orange: #ff9100;
+$accent-yellow: #ffd600;
+$accent-teal: #1de9b6;
+
+// Border Colors
+$border-primary: #ffffff0a;
+$border-secondary: #ffffff14;
+$border-accent: #2671fe30;
+
+// Glow Effects
+$blue-glow: rgba(38, 113, 254, 0.25);
+$blue-glow-intense: rgba(38, 113, 254, 0.4);
+$purple-glow: rgba(108, 92, 231, 0.25);
+
+// ---------- GRADIENTS ----------
+$gradient-primary: linear-gradient(
+  135deg,
+  $primary-blue 0%,
+  $primary-purple 100%
+);
+$gradient-blue: linear-gradient(
+  135deg,
+  $primary-blue 0%,
+  $primary-blue-light 100%
+);
+$gradient-dark: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+$gradient-overlay: linear-gradient(
+  to bottom,
+  transparent 0%,
+  rgba(10, 10, 10, 0.3) 40%,
+  rgba(10, 10, 10, 0.8) 80%,
+  $bg-primary 100%
+);
+
+// ---------- TYPOGRAPHY ----------
+// Font Families
+$font-primary: "Public Sans", sans-serif;
+$font-heading: "Public Sans", sans-serif;
+$font-mono: "Martian Mono", monospace;
+
+// Font Sizes
+$text-xs: 0.75rem; // 12px
+$text-sm: 0.875rem; // 14px
+$text-base: 1rem; // 16px
+$text-lg: 1.125rem; // 18px
+$text-xl: 1.25rem; // 20px
+$text-2xl: 1.5rem; // 24px
+$text-3xl: 1.875rem; // 30px
+$text-4xl: 2.25rem; // 36px
+$text-5xl: 3rem; // 48px
+$text-6xl: 3.75rem; // 60px
+$text-7xl: 5rem; // 80px
+
+// Font Weights
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+$weight-extrabold: 800;
+
+// Line Heights
+$leading-tight: 1.1;
+$leading-snug: 1.3;
+$leading-normal: 1.5;
+$leading-relaxed: 1.8;
+$leading-loose: 2;
+
+// Letter Spacing
+$tracking-tight: -0.5px;
+$tracking-normal: 0px;
+$tracking-wide: 1px;
+$tracking-wider: 2px;
+$tracking-widest: 3px;
+
+// ---------- SPACING SYSTEM ----------
+$spacing-xs: 0.25rem; // 4px
+$spacing-sm: 0.5rem; // 8px
+$spacing-md: 1rem; // 16px
+$spacing-lg: 1.5rem; // 24px
+$spacing-xl: 2rem; // 32px
+$spacing-2xl: 2.5rem; // 40px
+$spacing-3xl: 3rem; // 48px
+$spacing-4xl: 4rem; // 64px
+$spacing-5xl: 5rem; // 80px
+$spacing-6xl: 6.25rem; // 100px
+
+// Section Padding
+$section-padding-y: 100px;
+$section-padding-x: 20px;
+$section-padding-y-mobile: 60px;
+
+// ---------- BORDER RADIUS ----------
+$radius-sm: 6px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+$radius-2xl: 20px;
+$radius-3xl: 30px;
+$radius-4xl: 40px;
+$radius-full: 50%;
+
+// ---------- SHADOWS ----------
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+$shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+$shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+$shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
+$shadow-blue: 0 10px 30px rgba(38, 113, 254, 0.15);
+$shadow-blue-intense: 0 10px 40px rgba(38, 113, 254, 0.3);
+$shadow-purple: 0 10px 30px rgba(108, 92, 231, 0.15);
+
+// ---------- TRANSITIONS ----------
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
+$transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-bounce: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// ---------- BREAKPOINTS ----------
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-2xl: 1400px;
+
+// ---------- Z-INDEX ----------
+$z-dropdown: 100;
+$z-sticky: 200;
+$z-fixed: 300;
+$z-modal-backdrop: 400;
+$z-modal: 500;
+$z-popover: 600;
+$z-tooltip: 700;
+$z-loader: 800;
+$z-toast: 900;
+
+// ---------- CONTAINER WIDTHS ----------
+$container-sm: 640px;
+$container-md: 768px;
+$container-lg: 1024px;
+$container-xl: 1200px;
+$container-2xl: 1400px;
+
+// ---------- ANIMATION DURATIONS ----------
+$anim-fast: 0.2s;
+$anim-normal: 0.3s;
+$anim-slow: 0.5s;
+$anim-slower: 0.8s;
+$anim-slowest: 1.2s;
+
+// ---------- OPACITY ----------
+$opacity-disabled: 0.5;
+$opacity-hover: 0.8;
+$opacity-muted: 0.6;
+
+// ---------- BORDERS ----------
+$border-width-thin: 1px;
+$border-width-normal: 2px;
+$border-width-thick: 3px;

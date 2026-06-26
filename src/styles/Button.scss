@@ -1,0 +1,24 @@
+@use '../../styles/variables' as *;
+
+.custom-button {
+  padding: $spacing-md $spacing-2xl;
+  background: $gradient-primary;
+  color: #fff;
+  border: none;
+  border-radius: $radius-md;
+  font-size: $text-base;
+  font-weight: $weight-semibold;
+  font-family: $font-primary;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-blue-intense;
+  }
+
+  &:disabled {
+    opacity: $opacity-disabled;
+    cursor: not-allowed;
+  }
+}

@@ -27,12 +27,8 @@ const About = () => {
 
       <AboutBanner />
       <Story />
-      <AboutSlider />
       <AboutMission />
       <Choose />
-      <AboutCulture />
-      <AboutPeople />
-      <div className="about-empty"></div>
     </div>
   );
 };

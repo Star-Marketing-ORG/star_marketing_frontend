@@ -54,8 +54,8 @@ function App() {
   return (
     <div className="app">
       <QueryClientProvider client={queryClient}>
-        <CurtainLoader />
-        <ContactButtons />
+        {/* <CurtainLoader /> */}
+        {/* <ContactButtons /> */}
         {/* <OfferComp /> */}
         <BrowserRouter>
           <ScrollToTopAndTrack />

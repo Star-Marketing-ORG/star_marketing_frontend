@@ -1,0 +1,27 @@
+@use '../../styles/variables' as *;
+
+.card {
+  background: $bg-card;
+  border: $border-width-thin solid $border-primary;
+  border-radius: $radius-xl;
+  padding: $spacing-2xl;
+  transition: all $transition-smooth;
+
+  &:hover {
+    border-color: $border-accent;
+    box-shadow: $shadow-blue;
+  }
+
+  .card-title {
+    font-size: $text-xl;
+    font-weight: $weight-semibold;
+    color: $text-primary;
+    margin-bottom: $spacing-md;
+  }
+
+  .card-text {
+    font-size: $text-base;
+    line-height: $leading-relaxed;
+    color: $text-secondary;
+  }
+}

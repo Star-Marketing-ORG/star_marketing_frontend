@@ -22,3 +22,8 @@ export const getAllReviewsApi = async () => {
   const { data } = await axiosInstance.get("/review/all-reviews");
   return data;
 };
+
+export const getAllServicesApi = async () => {
+  const { data } = await axiosInstance.get("/service/all-services");
+  return data;
+};

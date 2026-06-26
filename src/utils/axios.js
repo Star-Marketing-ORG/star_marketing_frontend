@@ -6,17 +6,51 @@ const axiosInstance = axios.create({
   withCredentials: true,
 });
 
+let lastToast = "";
+let lastToastTime = 0;
+
+const showToastOnce = (message) => {
+  const now = Date.now();
+
+  // Prevent duplicate messages within 3 seconds
+  if (lastToast === message && now - lastToastTime < 3000) {
+    return;
+  }
+
+  lastToast = message;
+  lastToastTime = now;
+
+  toast.error(message);
+};
+
 axiosInstance.interceptors.response.use(
   (response) => response,
-
   (error) => {
-    const message =
-      error?.response?.data?.message || error.message || "Something went wrong";
+    // No response received -> network/backend unreachable
+    if (!error.response) {
+      showToastOnce(
+        "Please check your internet connection and try again."
+      );
+      return Promise.reject(error);
+    }
 
-    toast.error(message);
+    const { status } = error.response;
+
+    // Server errors
+    if (status >= 500) {
+      showToastOnce(
+        "Something went wrong on our server. Please try again later."
+      );
+      return Promise.reject(error);
+    }
+
+    // Other errors (400, etc.)
+    showToastOnce(
+      error.response.data?.message || "Something went wrong."
+    );
 
     return Promise.reject(error);
-  },
+  }
 );
 
 export default axiosInstance;

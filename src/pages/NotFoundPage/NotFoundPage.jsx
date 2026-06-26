@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./NotFoundPage.scss";
+import { FiArrowRight } from "react-icons/fi";
 import { useEffect } from "react";
 
 const NotFoundPage = () => {
@@ -8,50 +8,46 @@ const NotFoundPage = () => {
   }, []);
 
   return (
-    <div className="digital-agency-404">
-      {/* Animated Background */}
-      <div className="digital-bg">
-        <div className="circuit-overlay"></div>
-        <div className="floating-grid"></div>
-      </div>
+    <div className="bg-bg-primary min-h-screen flex items-center justify-center">
+      <div className="px-5 sm:px-8 md:px-15 lg:px-20 py-16 sm:py-20 md:py-28">
+        <div className="max-w-[700px] mx-auto text-center">
+          {/* Large 404 */}
+          <h1 className="text-[120px] sm:text-[160px] md:text-[200px] lg:text-[240px] font-extrabold leading-none font-heading mb-4">
+            <span className="text-text-primary">4</span>
+            <span className="text-primary">0</span>
+            <span className="text-text-primary">4</span>
+          </h1>
 
-      {/* Main Content */}
-      <div className="error-container">
-        <div className="error-code">
-          <span className="digit">4</span>
-          <div className="zero">
-            <div className="inner-globe"></div>
-            <span>0</span>
+          {/* Eyebrow */}
+          <div className="flex items-center justify-center gap-4 text-primary text-xs sm:text-sm tracking-[4px] sm:tracking-[6px] font-semibold mb-6">
+            <span className="w-10 h-px bg-primary block" />
+            PAGE NOT FOUND
+            <span className="w-10 h-px bg-primary block" />
           </div>
-          <span className="digit">4</span>
+
+          {/* Heading */}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-text-primary uppercase leading-tight mb-6 font-heading">
+            Sorry, we couldn't find that page.
+          </h2>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link
+              to="/"
+              className="group inline-flex items-center gap-3 bg-primary hover:bg-primary-dark text-white rounded-full px-8 py-4 font-semibold tracking-[2px] uppercase text-xs transition-all duration-300"
+            >
+              <span>Back to Home</span>
+              <FiArrowRight className="text-base group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/contact-us"
+              className="group inline-flex items-center gap-3 border border-border-secondary hover:border-primary text-text-primary hover:text-primary rounded-full px-8 py-4 font-semibold tracking-[2px] uppercase text-xs transition-all duration-300"
+            >
+              <span>Contact Us</span>
+              <FiArrowRight className="text-base group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
-
-        <h1>Page Not Found</h1>
-        <p className="subtitle">
-          Sorry, we couldn’t find that page.
-          <br />
-          Let’s head back home and try again.
-        </p>
-
-        <Link to="/" className="cta-button">
-          <span>Back to Home</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M5 12H19M19 12L12 5M19 12L12 19"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </Link>
-      </div>
-
-      {/* Floating UI Elements (Digital Theme) */}
-      <div className="floating-shapes">
-        <div className="shape hexagon"></div>
-        <div className="shape triangle"></div>
-        <div className="shape circle"></div>
       </div>
     </div>
   );

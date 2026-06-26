@@ -5,7 +5,6 @@ export const designData = {
     { title: "Web Design", link: "/design/web-design" },
     { title: "Graphic Design", link: "/design/graphic-design" },
     { title: "Branding", link: "/design/branding" },
-    { title: "Production", link: "/design/production" },
   ],
 };
 
@@ -38,7 +37,7 @@ export const marketingData = {
   desc: "Discover strategies and tools to boost your brand awareness, engage your audience, and drive business growth.",
   submenu: [
     { title: "Marketing Strategy", link: "/marketing/marketing-strategy" },
-    { title: "Holistic Marketing", link: "/marketing/holistic-marketing" },
+    // { title: "Holistic Marketing", link: "/marketing/holistic-marketing" },
     { title: "SEO", link: "/marketing/seo" },
     { title: "Paid Advertising", link: "/marketing/paid-advertising" },
     { title: "Social Media", link: "/marketing/social-media" },

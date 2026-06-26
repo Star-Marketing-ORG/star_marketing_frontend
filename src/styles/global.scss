@@ -1,11 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@use './variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  font-family: "Public Sans", sans-serif;
+  font-family: $font-primary;
 }
 
 a {
@@ -18,34 +22,37 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: $spacing-lg;
+
     .error-desc {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 5px;
-      color: #fff;
+      gap: $spacing-sm;
+      color: $text-primary;
       text-transform: capitalize !important;
 
       p {
         text-transform: capitalize !important;
+        color: $text-secondary;
       }
 
       &.dif-err {
-        color: #000;
+        color: $bg-primary;
       }
 
       button {
-        padding: 5px 10px;
-        background: #2671fe;
+        padding: $spacing-sm $spacing-md;
+        background: $primary-blue;
         color: #fff;
         border: none;
-        font-weight: bold;
-        border-radius: 5px;
+        font-weight: $weight-bold;
+        border-radius: $radius-sm;
         cursor: pointer;
+        transition: background $transition-fast;
 
         &:hover {
-          background: #1c448f;
+          background: $primary-blue-dark;
         }
       }
     }
@@ -54,22 +61,23 @@ a {
   button,
   input,
   textarea {
-    font-family: "Public Sans", sans-serif;
+    font-family: $font-primary;
   }
 
   .primary-btn {
-    margin-top: 30px;
+    margin-top: $spacing-2xl;
     border: 1px solid #ddd;
     padding: 15px 30px;
-    font-size: 18px;
-    transition: all 0.3s ease-in-out;
-    border-radius: 5px;
-    font-weight: 500;
+    font-size: $text-lg;
+    transition: all $transition-base;
+    border-radius: $radius-md;
+    font-weight: $weight-medium;
     display: inline-block;
     cursor: pointer;
+
     &:hover {
-      background: #121212;
-      color: #fff;
+      background: $bg-primary;
+      color: $text-primary;
     }
   }
 }
@@ -78,16 +86,16 @@ a {
 ::-webkit-scrollbar {
   width: 8px;
   height: 7px;
-  background-color: #000;
+  background-color: $bg-primary;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: $bg-primary;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2671fe;
-  border-radius: 5px;
+  background-color: $primary-blue;
+  border-radius: $radius-md;
 }
 
 /* Remove scrollbar arrows */
